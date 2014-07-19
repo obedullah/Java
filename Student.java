@@ -8,17 +8,20 @@ public class Student
 		Float [] marks = new Float [10];
 		String name="";
 		Scanner user_input = new Scanner( System.in );
-		for(int i=0;i<5;i++)
+		System.out.print("enter how many students : ");
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		for(int i=0;i<n;i++)
 		{
-			System.out.println("Enter your name: ");
+			System.out.print("Enter student name : ");
 			name=user_input.next();
 			sname[i]=name;
-			System.out.println("Enter your marks: ");
+			System.out.print("Enter marks: ");
 			marks[i]=user_input.nextFloat();
 			sum+=marks[i];
 		}
 		System.out.println("marks total: "+sum);
-		sum=sum/5;
+		sum=sum/n;
 		System.out.println("avg : "+sum);
 		
 	}
